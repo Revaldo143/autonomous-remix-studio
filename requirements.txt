@@ -1,0 +1,35 @@
+# Autonomous Multi-Agent AI Music Producer & Remix Studio
+# Python 3.11+ / CUDA 12.x. Versions verified against PyPI 2026-11-17.
+#
+# INSTALL ORDER MATTERS — install torch FIRST from the CUDA index, otherwise
+# pip resolves the CPU-only wheel from default PyPI:
+#   pip install torch==2.15.0 --index-url https://download.pytorch.org/whl/cu128
+#   pip install -r requirements.txt
+# (cu128 wheels match torch 2.15.0; if your NVIDIA driver needs an older
+# CUDA, use cu126 or cu121 and the matching torch build instead.)
+#
+# NOTES
+# - essentia ships only dev builds on PyPI (2.1b6.dev*); the pinned build is
+#   the latest published one. If it fails to import against numpy 2.x, use
+#   the conda-forge build instead: `conda install -c conda-forge essentia`.
+# - librosa 1.x requires soundfile; soxr is no longer a hard dependency.
+# - pyrubberband needs the `rubberband` CLI binary on PATH at runtime
+#   (`apt install rubberband-cli` / `brew install rubberband`).
+
+torch==2.15.0
+langgraph==1.2.22
+langchain-core==1.8.1
+fastmcp==4.2.0
+pydantic==2.14.3
+librosa==1.0.1
+essentia==2.1b6.dev1438
+pedalboard==0.9.26
+pyrubberband==0.4.0
+matchering==2.0.6
+pretty_midi==0.2.11.post0
+soundfile==0.14.0
+numpy==2.5.5
+scipy==1.18.1
+fastapi==0.163.1
+uvicorn==0.54.0
+python-dotenv==1.2.4
