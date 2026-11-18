@@ -1,0 +1,4 @@
+Metadata-Version: 2.1
+Name: torchaudio
+Version: 0.0.0
+Summary: In-process stub for the Autonomous Remix Studio (torch.stft-backed Spectrogram + scipy resample). Real torchaudio 2.15.0 is unpublished; latest release 2.11.1 is ABI-incompatible with the pinned torch 2.15.0. This metadata exists only so transformers' is_torchaudio_available() sees a distribution; the implementation lives in the generative server process, not here.
